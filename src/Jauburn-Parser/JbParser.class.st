@@ -453,6 +453,8 @@ JbParser >> stringExpression [
 
 { #category : #statements }
 JbParser >> variableDeclarationStatement [
+"<variable-declaration-statement> ::=
+   var <identifier> = <expression> ;"
 
 	^ ('var' asParser , identifier , $= asParser trim , expression
 		, $; asParser trim)

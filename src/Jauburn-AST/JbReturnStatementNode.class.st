@@ -7,6 +7,12 @@ Class {
 	#category : #'Jauburn-AST-Core'
 }
 
+{ #category : #api }
+JbReturnStatementNode >> executeIn: environment [
+
+	^ self expression evaluateIn: environment.
+]
+
 { #category : #accessing }
 JbReturnStatementNode >> expression [
 	^ expression

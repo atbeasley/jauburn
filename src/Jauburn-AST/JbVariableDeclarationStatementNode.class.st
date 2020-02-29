@@ -8,6 +8,12 @@ Class {
 	#category : #'Jauburn-AST-Core'
 }
 
+{ #category : #api }
+JbVariableDeclarationStatementNode >> executeIn: environment [
+
+	environment at: self identifier put: (self expression evaluateIn: environment)
+]
+
 { #category : #accessing }
 JbVariableDeclarationStatementNode >> expression [
 	^ expression

@@ -1,3 +1,6 @@
+"
+Used for unary negation
+"
 Class {
 	#name : #JbArity1OperatorNode,
 	#superclass : #Object,

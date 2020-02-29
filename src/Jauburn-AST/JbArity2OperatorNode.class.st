@@ -1,3 +1,6 @@
+"
+Operation with 2 elements.
+"
 Class {
 	#name : #JbArity2OperatorNode,
 	#superclass : #Object,

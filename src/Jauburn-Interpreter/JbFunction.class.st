@@ -30,7 +30,10 @@ JbFunction >> body: anObject [
 JbFunction >> call: arguments in: callEnvironment [
 	"You need to implement this method!  arguments will contain the arguments to pass to this function and callEnvironment will contain the environment in place when this function was called."
 	
-	self shouldBeImplemented 
+	| functionEnvironment |
+	functionEnvironment := JbEnvironment newFromKeys: (self parameters collect: [ :p | p identifier ]) andValues: arguments.
+	functionEnvironment outerEnvironment: self environment.
+	body do: [ :p | p executeIn: functionEnvironment ] 
 ]
 
 { #category : #accessing }
